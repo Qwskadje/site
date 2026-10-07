@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Список объектов русской архитектуры</title>
+  </head>
+  <body>
+    <header>
+      <h1 align="center">Русская архитектура</h1>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><b><a href="table.html">Список объектов русской архитектуры</a></b></li>
+      </ul>
+    </header>
+    <hr>
+    <div>
+      <h2>Список объектов русской архитектуры</h2>
+      <details>
+        <summary><b>График</b></summary>
+        <form action="table.html" method="get">
+          <h3>Значение по оси OX</h3>
+          <p>
+            <label><input type="radio" id="ox" name="ox" value="type" checked> Тип</label><br>
+            <label><input type="radio" id="ox" name="ox" value="city"> Город</label><br>
+            <label><input type="radio" id="ox" name="ox" value="year"> Год</label>
+          </p>
+          <h3>Значение по оси OY</h3>
+          <p>
+            <label><input type="checkbox" id="oy" name="oy" value="max"> Максимальная высота</label><br>
+            <label><input type="checkbox" id="oy" name="oy" value="min"> Минимальная высота</label><br>
+            <label><input type="checkbox" id="oy" name="oy" value="count"> Средняя высота</label>
+          </p>
+          <p><button>Построить</button></p>
+        </form>
+        <p>Здесь будет график</p>
+      </details>
+      <details>
+        <summary><b>Фильтр</b></summary>
+        <form action="table.html" method="get">
+          <p><label>Название: <input type="text" id="f_name" name="f_name"></label></p>
+          <p><label>Тип: <input type="text" id="types" name="types"></label></p>
+          <p><label>Город: <input type="text" id="f_city" name="f_city"></label></p>
+          <p>
+            Год:
+            <label>от <input type="number" id="year_from" name="year_from" min="0" max="2100"></label>
+            <label>до <input type="number" id="year_to" name="year_to" min="0" max="2100"></label>
+          </p>
+          <p>
+            Высота:
+            <label>от <input type="number" id="h_from" name="h_from" min="0" step="0.5"></label>
+            <label>до <input type="number" id="h_to" name="h_to" min="0" step="0.5"></label>
+          </p>
+          <p><button>Найти</button></p>
+        </form>
+      </details>
+      <details>
+        <summary><b>Сортировка</b></summary>
+        <form action="table.html" method="get">
+          <p>
+            <label for="sort1">Первый уровень:</label>
+            <select name="sort1" id="sort1">
+              <option value="none" selected>Нет</option>
+              <option value="name">Название</option>
+              <option value="type">Тип</option>
+              <option value="city">Город</option>
+              <option value="year">Год</option>
+              <option value="height">Высота, м</option>
+            </select>
+            <label>по убыванию? <input type="checkbox" name="desc1" value="1"></label>
+          </p>
+          <p>
+            <label for="sort2">Второй уровень:</label>
+            <select name="sort2" id="sort2">
+              <option value="none" selected>Нет</option>
+              <option value="name">Название</option>
+              <option value="type">Тип</option>
+              <option value="city">Город</option>
+              <option value="year">Год</option>
+              <option value="height">Высота, м</option>
+            </select>
+            <label>по убыванию? <input type="checkbox" name="desc2" value="1"></label>
+          </p>
+          <p>
+            <label for="sort3">Третий уровень:</label>
+            <select name="sort3" id="sort3">
+              <option value="none" selected>Нет</option>
+              <option value="name">Название</option>
+              <option value="type">Тип</option>
+              <option value="city">Город</option>
+              <option value="year">Год</option>
+              <option value="height">Высота, м</option>
+            </select>
+            <label>по убыванию? <input type="checkbox" name="desc3" value="1"></label>
+          </p>
+          <p><button>Сортировать</button></p>
+        </form>
+      </details>
+      <br>
+      <table border="2" cellpadding="4" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Название</th>
+            <th>Тип</th>
+            <th>Город</th>
+            <th>Год</th>
+            <th>Высота, м</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Лахта Центр</td><td>Небоскрёб</td><td>Санкт-Петербург</td><td align="right">2019</td><td align="right">462</td></tr>
+          <tr><td>Останкинская телебашня</td><td>Телебашня</td><td>Москва</td><td align="right">1967</td><td align="right">540</td></tr>
+          <tr><td>Город Столиц (Москва-Сити)</td><td>Небоскрёб</td><td>Москва</td><td align="right">2010</td><td align="right">302</td></tr>
+          <tr><td>Башня «Федерация» (Восток)</td><td>Небоскрёб</td><td>Москва</td><td align="right">2016</td><td align="right">374</td></tr>
+          <tr><td>Меркурий Сити Тауэр</td><td>Небоскрёб</td><td>Москва</td><td align="right">2013</td><td align="right">339</td></tr>
+          <tr><td>ОКО (Южная башня)</td><td>Небоскрёб</td><td>Москва</td><td align="right">2015</td><td align="right">354</td></tr>
+          <tr><td>Neva Towers (башня 2)</td><td>Небоскрёб</td><td>Москва</td><td align="right">2020</td><td align="right">345</td></tr>
+          <tr><td>Империя Тауэр</td><td>Небоскрёб</td><td>Москва</td><td align="right">2011</td><td align="right">239</td></tr>
+          <tr><td>Башня «Эволюция»</td><td>Небоскрёб</td><td>Москва</td><td align="right">2014</td><td align="right">246</td></tr>
+          <tr><td>Башня на Набережной (блок С)</td><td>Небоскрёб</td><td>Москва</td><td align="right">2007</td><td align="right">268</td></tr>
+          <tr><td>Триумф-Палас</td><td>Небоскрёб</td><td>Москва</td><td align="right">2005</td><td align="right">264</td></tr>
+          <tr><td>Высоцкий</td><td>Небоскрёб</td><td>Екатеринбург</td><td align="right">2012</td><td align="right">188</td></tr>
+          <tr><td>Главное здание МГУ</td><td>Высотное здание</td><td>Москва</td><td align="right">1953</td><td align="right">240</td></tr>
+          <tr><td>Гостиница «Украина»</td><td>Высотное здание</td><td>Москва</td><td align="right">1957</td><td align="right">206</td></tr>
+          <tr><td>Дом на Котельнической набережной</td><td>Высотное здание</td><td>Москва</td><td align="right">1952</td><td align="right">176</td></tr>
+          <tr><td>Дом на Кудринской площади</td><td>Высотное здание</td><td>Москва</td><td align="right">1954</td><td align="right">160</td></tr>
+          <tr><td>Здание МИД</td><td>Высотное здание</td><td>Москва</td><td align="right">1953</td><td align="right">172</td></tr>
+          <tr><td>Административное здание у Красных ворот</td><td>Высотное здание</td><td>Москва</td><td align="right">1953</td><td align="right">138</td></tr>
+          <tr><td>Гостиница «Ленинградская»</td><td>Высотное здание</td><td>Москва</td><td align="right">1954</td><td align="right">136</td></tr>
+          <tr><td>Шуховская башня на Шаболовке</td><td>Радиобашня</td><td>Москва</td><td align="right">1922</td><td align="right">160</td></tr>
+          <tr><td>Шуховская башня на Оке</td><td>Радиобашня</td><td>Дзержинск</td><td align="right">1929</td><td align="right">128</td></tr>
+          <tr><td>Русский мост</td><td>Мост</td><td>Владивосток</td><td align="right">2012</td><td align="right">324</td></tr>
+          <tr><td>Мост через бухту Золотой Рог</td><td>Мост</td><td>Владивосток</td><td align="right">2012</td><td align="right">226</td></tr>
+          <tr><td>Монумент «Покорителям космоса»</td><td>Монумент</td><td>Москва</td><td align="right">1964</td><td align="right">107</td></tr>
+          <tr><td>Монумент «Рабочий и колхозница»</td><td>Монумент</td><td>Москва</td><td align="right">1937</td><td align="right">24,5</td></tr>
+          <tr><td>Монумент «Родина-мать зовёт!»</td><td>Монумент</td><td>Волгоград</td><td align="right">1967</td><td align="right">85</td></tr>
+          <tr><td>Стела Победы на Поклонной горе</td><td>Монумент</td><td>Москва</td><td align="right">1995</td><td align="right">142</td></tr>
+          <tr><td>Александровская колонна</td><td>Колонна</td><td>Санкт-Петербург</td><td align="right">1834</td><td align="right">47,5</td></tr>
+          <tr><td>Ростральная колонна</td><td>Колонна</td><td>Санкт-Петербург</td><td align="right">1810</td><td align="right">32</td></tr>
+          <tr><td>Исаакиевский собор</td><td>Собор</td><td>Санкт-Петербург</td><td align="right">1858</td><td align="right">101,5</td></tr>
+          <tr><td>Петропавловский собор</td><td>Собор</td><td>Санкт-Петербург</td><td align="right">1733</td><td align="right">122,5</td></tr>
+          <tr><td>Смольный собор</td><td>Собор</td><td>Санкт-Петербург</td><td align="right">1835</td><td align="right">93</td></tr>
+          <tr><td>Храм Спаса на Крови</td><td>Собор</td><td>Санкт-Петербург</td><td align="right">1907</td><td align="right">81</td></tr>
+          <tr><td>Казанский собор</td><td>Собор</td><td>Санкт-Петербург</td><td align="right">1811</td><td align="right">71</td></tr>
+          <tr><td>Адмиралтейство</td><td>Здание</td><td>Санкт-Петербург</td><td align="right">1823</td><td align="right">72</td></tr>
+          <tr><td>Зимний дворец</td><td>Дворец</td><td>Санкт-Петербург</td><td align="right">1762</td><td align="right">22</td></tr>
+          <tr><td>Кронштадтский Морской собор</td><td>Собор</td><td>Кронштадт</td><td align="right">1913</td><td align="right">70,5</td></tr>
+          <tr><td>Храм Христа Спасителя</td><td>Собор</td><td>Москва</td><td align="right">2000</td><td align="right">103</td></tr>
+          <tr><td>Собор Василия Блаженного</td><td>Собор</td><td>Москва</td><td align="right">1561</td><td align="right">65</td></tr>
+          <tr><td>Спасская башня Кремля</td><td>Башня</td><td>Москва</td><td align="right">1491</td><td align="right">71</td></tr>
+          <tr><td>Никольская башня Кремля</td><td>Башня</td><td>Москва</td><td align="right">1491</td><td align="right">70,5</td></tr>
+          <tr><td>Колокольня Ивана Великого</td><td>Колокольня</td><td>Москва</td><td align="right">1508</td><td align="right">81</td></tr>
+          <tr><td>Успенский собор Московского Кремля</td><td>Собор</td><td>Москва</td><td align="right">1479</td><td align="right">45</td></tr>
+          <tr><td>Колокольня Новодевичьего монастыря</td><td>Колокольня</td><td>Москва</td><td align="right">1690</td><td align="right">72</td></tr>
+          <tr><td>Колокольня Троице-Сергиевой лавры</td><td>Колокольня</td><td>Сергиев Посад</td><td align="right">1770</td><td align="right">88</td></tr>
+          <tr><td>Церковь Вознесения в Коломенском</td><td>Церковь</td><td>Москва</td><td align="right">1532</td><td align="right">62</td></tr>
+          <tr><td>Преображенская церковь в Кижах</td><td>Церковь</td><td>Кижи</td><td align="right">1714</td><td align="right">37</td></tr>
+          <tr><td>Софийский собор</td><td>Собор</td><td>Великий Новгород</td><td align="right">1050</td><td align="right">38</td></tr>
+          <tr><td>Церковь Покрова на Нерли</td><td>Церковь</td><td>Боголюбово</td><td align="right">1165</td><td align="right">27</td></tr>
+          <tr><td>Мечеть Кул-Шариф</td><td>Мечеть</td><td>Казань</td><td align="right">2005</td><td align="right">58</td></tr>
+          <tr><td>Звонница Ростовского кремля</td><td>Колокольня</td><td>Ростов</td><td align="right">1687</td><td align="right">60</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <hr>
+    <footer>
+      <p align="center">Сайт «Русская архитектура». Разработчик: студент группы <b>Б9124-09.03.04(6)</b> <b>Лавров Максим</b></p>
+    </footer>
+  </body>
+</html>
